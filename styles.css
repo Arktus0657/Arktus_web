@@ -1,0 +1,136 @@
+body {
+    background-color: #31384a;
+}
+
+.fixedbar {
+    top: 0;
+    margin: 0 50px;
+    width: 90%;
+    position: fixed;
+}
+
+h2 {
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    font-stretch: expanded;
+    margin-top: 50px;
+    line-height: 20px;
+    font-weight: 800;
+}
+
+h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #fff;
+}
+
+.book-shelf {
+    position: absolute;
+    transform: translate(4%, 40%);  
+    width: 1285px;
+    display: inline-flex;
+    overflow-y: hidden;
+}
+
+.books {
+    display: grid;
+    grid-auto-flow: column;
+    scroll-behavior: auto;
+    justify-content: center;
+}
+
+.book {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 10px;
+    width: 250px;
+    height: 465px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+a {
+    text-decoration: none;
+}
+
+.book:hover {
+    transform: scale(1.1);
+}
+
+.book img {
+    width: 100%;
+    height: 345px;
+    object-fit: contain;
+}
+
+.book h3 {
+    margin: 10px 0;
+    padding: 0 10px;
+    text-align: center;
+    font-weight: 1000;
+    color: #00000ada;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+.book p {
+    margin: 0;
+    padding: 0 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+#search-bar {
+    display: flex;
+    margin: 20px 0;
+}
+
+#search-bar input {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.button {
+    background-color: #55baba;
+    padding: 10px;
+    width: 50%;
+    border: none;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.button:hover {
+    color: white;
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    border-radius: 4px;
+    background-color: #0f596e;
+    transition: width 0.5s;
+}
+
+.button:hover::before {
+    width: 100%;
+    z-index: -1;
+}
